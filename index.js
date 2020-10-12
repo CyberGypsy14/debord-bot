@@ -4,10 +4,10 @@ const Sheet = require('./sheet');
 (async function (){
 //connect to twitter via api
 const client = new Twitter({
-    consumer_key: 'iuP84dyXfkjJdW8vWQgTrJ2Eb',
-    consumer_secret: '8fDFz7IZ7CjZMlwrAVLIdSLNgv1oxgkkMAwOrYUH9qaKGErTCM',
-    access_token_key: '1315272128481034240-SwWpUcjmK8HHLO5bXAvkLqkamAoSnE',
-    access_token_secret: 'fLoAnXz6lUNc4AShI7TF0TBPOqyVivsGXyRPBiKv5iZU9'
+    consumer_key: process.env.BOT_CONSUMER_KEY,
+    consumer_secret: process.env.BOT_CONSUMER_SECRET,
+    access_token_key: process.env.BOT_ACCESS_TOKEN,
+    access_token_secret: process.env.BOT_ACCESS_TOKEN_SECRET
   });
   //pull tweet from ss
   const sheet = new Sheet
